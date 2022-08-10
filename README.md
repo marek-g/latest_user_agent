@@ -1,4 +1,4 @@
-# ledger-parser
+# latest_user_agent
 
 [![Crates.io Version](https://img.shields.io/crates/v/latest_user_agent.svg)](https://crates.io/crates/latest_user_agent)
 [![Docs.rs Version](https://docs.rs/latest_user_agent/badge.svg)](https://docs.rs/latest_user_agent)
