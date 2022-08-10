@@ -1,8 +1,24 @@
 [package]
 name = "latest_user_agent"
 version = "0.1.0"
+authors = ["Marek Gibek <marek-dev@yandex.com>"]
+description = "Rust library for generating latest browser user agent."
+license = "Unlicense"
+repository = "https://github.com/marek-g/latest_user_agent"
+readme = "README.md"
+documentation = "https://docs.rs/latest_user_agent"
+keywords = ["browser", "user agent"]
+categories = ["authentication", "network-programming", "web-programming::http-client"]
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+tokio = "1"
+reqwest = "0.11"
+chrono = "0.4"
+log = "0.4"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt"] }
+simple_logger = "2"
