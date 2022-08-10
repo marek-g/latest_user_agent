@@ -7,7 +7,7 @@ license = "Unlicense"
 repository = "https://github.com/marek-g/latest_user_agent"
 readme = "README.md"
 documentation = "https://docs.rs/latest_user_agent"
-keywords = ["browser", "user agent"]
+keywords = ["browser", "user-agent"]
 categories = ["authentication", "network-programming", "web-programming::http-client"]
 edition = "2021"
 
