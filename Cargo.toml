@@ -8,17 +8,27 @@ repository = "https://github.com/marek-g/latest_user_agent"
 readme = "README.md"
 documentation = "https://docs.rs/latest_user_agent"
 keywords = ["browser", "user-agent"]
-categories = ["authentication", "network-programming", "web-programming::http-client"]
+categories = [
+    "authentication",
+    "network-programming",
+    "web-programming::http-client",
+]
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 tokio = "1"
-reqwest = "0.11"
+reqwest = { version = "0.11", default-features = false }
 chrono = "0.4"
 log = "0.4"
 
 [dev-dependencies]
 tokio = { version = "1", features = ["macros", "rt"] }
 simple_logger = "2"
+
+[features]
+default = ["default-tls"]
+default-tls = ["reqwest/default-tls"]
+native-tls = ["reqwest/native-tls"]
+rustls-tls = ["reqwest/rustls-tls"]
