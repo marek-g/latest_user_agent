@@ -12,10 +12,10 @@ pub async fn get_latest_ua(os: OS) -> Option<String> {
     let attr = "data-latest-firefox=\"";
     if let Some(mut start_index) = body.find(attr) {
         start_index += attr.len();
-        if let Some(length) = body[start_index..].find("\"") {
+        if let Some(length) = body[start_index..].find('"') {
             let version = &body[start_index..start_index + length];
 
-            let numbers: Vec<_> = version.split(".").into_iter().take(2).collect();
+            let numbers: Vec<_> = version.split('.').take(2).collect();
             let version = numbers.join(".");
 
             return Some(format_version(&version, os));
@@ -26,8 +26,8 @@ pub async fn get_latest_ua(os: OS) -> Option<String> {
 }
 
 pub fn estimate_latest_ua(os: OS) -> String {
-    let known_version = 103;
-    let known_date = NaiveDate::from_ymd(2022, 07, 26);
+    let known_version = 126;
+    let known_date = NaiveDate::from_ymd(2024, 5, 14);
     let versions_per_year = 12;
 
     let days_between_version = (365 + (versions_per_year - 1)) / versions_per_year;
