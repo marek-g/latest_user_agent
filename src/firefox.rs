@@ -27,7 +27,7 @@ pub async fn get_latest_ua(os: OS) -> Option<String> {
 
 pub fn estimate_latest_ua(os: OS) -> String {
     let known_version = 126;
-    let known_date = NaiveDate::from_ymd(2024, 5, 14);
+    let known_date = NaiveDate::from_ymd_opt(2024, 5, 14).unwrap();
     let versions_per_year = 12;
 
     let days_between_version = (365 + (versions_per_year - 1)) / versions_per_year;
