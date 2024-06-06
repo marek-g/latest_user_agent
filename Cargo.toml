@@ -1,6 +1,6 @@
 [package]
 name = "latest_user_agent"
-version = "0.1.1"
+version = "0.2.0"
 authors = ["Marek Gibek <marek-dev@yandex.com>"]
 description = "Rust library for generating latest browser user agent."
 license = "Unlicense"
